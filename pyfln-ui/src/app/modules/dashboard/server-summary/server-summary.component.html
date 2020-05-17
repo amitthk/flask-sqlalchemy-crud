@@ -1,5 +1,10 @@
 <table>
   <thead>
+    <tr><td colspan="5"><ul>
+      <li><a (click)="refreshList(1)"><span>1</span></a></li>
+      <li><a (click)="refreshList(2)"><span>2</span></a></li>
+      <li><a (click)="refreshList(3)"><span>3</span></a></li>
+    </ul></td></tr>
     <tr>
       <th>Id</th>
       <th>Hostname</th>
@@ -10,7 +15,7 @@
   </thead>
     <tbody>
       <tr *ngFor="let itm of serverList;let i = index" [attr.data-index]="i">
-        <td>{{itm.id}}</td>
+        <td><a [routerLink]="['/edit-server-info',itm.id]">{{itm.id}}</a></td>
         <td>{{itm.hostname}}</td>
         <td>{{itm.ip_address}}</td>
         <td>{{itm.environment}}</td>

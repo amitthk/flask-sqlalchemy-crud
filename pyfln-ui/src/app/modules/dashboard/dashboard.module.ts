@@ -6,11 +6,15 @@ import { ServerSummaryComponent } from './server-summary/server-summary.componen
 import { FormsModule } from '@angular/forms';
 import { HttpCommonService } from '../../services/http-common.service';
 import { EditServerInfoComponent } from './edit-server-info/edit-server-info.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    RouterModule
   ],
   declarations: [IndexComponent, YamlreadComponent, ServerSummaryComponent, EditServerInfoComponent],
   providers: [ HttpCommonService]

@@ -16,10 +16,10 @@ class ServerSummary(db.Model):
     __tablename__='server_summary'
     id=db.Column(db.Integer, primary_key=True)
     hostname=db.Column(db.String(255),nullable=False,unique=True)
-    ip_address=db.Column(db.String(255),nullable=False,unique=True)
-    environment=db.Column(db.String(255),nullable=False,unique=True)
-    service_name=db.Column(db.String(255),nullable=False,unique=True)
-    last_updated=db.Column(DateTime(timezone=True),nullable=False,server_default=func.now())
+    ip_address=db.Column(db.String(255),nullable=True,unique=True)
+    environment=db.Column(db.String(255),nullable=True,unique=True)
+    service_name=db.Column(db.String(255),nullable=True,unique=True)
+    last_updated=db.Column(DateTime(timezone=True),nullable=True,server_default=func.now())
 
     @staticmethod
     def serialize(item):

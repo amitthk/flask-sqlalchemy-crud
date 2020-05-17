@@ -1,3 +1,26 @@
-<p>
-  edit-server-info works!
-</p>
+<form action="#">
+<table>
+  <tbody>
+    <tr>
+      <td>hostname</td>
+      <td><input type="text" id="txthostname" [(ngModel)]="serverInfoModel.hostname" name="hostname" placeholder="hostname" /></td>
+    </tr>
+    <tr>
+      <td>ip_address</td>
+      <td><input type="text" id="txtip_address" [(ngModel)]="serverInfoModel.ip_address" name="ip_address" placeholder="ip_address" /></td>
+    </tr>
+    <tr>
+      <td>environment</td>
+      <td><input type="text" id="txtenvironment" [(ngModel)]="serverInfoModel.environment" name="environment" placeholder="environment" /></td>
+    </tr>
+    <tr>
+      <td>service_name</td>
+      <td><input type="text" id="txtservice_name" [(ngModel)]="serverInfoModel.service_name" name="service_name" placeholder="service_name" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button type="submit" (click)="submitForm()">Submit</button> </td>
+    </tr>
+  </tbody>
+</table>
+
+</form>
