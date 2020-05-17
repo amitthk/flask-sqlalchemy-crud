@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Hostname</th>
+      <th>IP</th>
+      <th>Environment</th>
+      <th></th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let itm of serverList;let i = index" [attr.data-index]="i">
+        <td>{{itm.id}}</td>
+        <td>{{itm.hostname}}</td>
+        <td>{{itm.ip_address}}</td>
+        <td>{{itm.environment}}</td>
+        <td>{{itm.last_updated}}</td>
+      </tr>
+    </tbody>
+  
+</table>

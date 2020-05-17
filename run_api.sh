@@ -1,1 +1,1 @@
-cd pyfln-auth && source venv/bin/activate && python app/app.py
+source venv/bin/activate && cd pyfln-auth/app && python app.py
