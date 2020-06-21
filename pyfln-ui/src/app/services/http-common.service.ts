@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
+import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/finally';
 
 import { AuthenticationService } from './index';
@@ -41,7 +42,7 @@ export class HttpCommonService {
         opt.method='POST'
         opt.responseType = ResponseContentType.Blob;
         return this.http.post(url,body,options).catch((response: Response)=>{
-            return Observable.of(response);
+            return Observable.create(response);
         })
     }
 
